@@ -1,5 +1,6 @@
 # Create Native App
-Bash script to bootstrap an opinionated React Native project. Automates the installation and setting up of a React Native project on your desktop.
+Bash script to bootstrap an opinionated boilerplate React Native project. Automates the installation and setting up of a bare-bones React Native project with several additional packages. The created project is placed in `$HOME/Desktop/`.
+
 
 ## Dependencies
 - `bash`
@@ -11,6 +12,7 @@ Bash script to bootstrap an opinionated React Native project. Automates the inst
 ```
 bash create.sh [name_of_project]
 ```
+
 
 ## Packages installed
 The packages installed for the project with this script are:
