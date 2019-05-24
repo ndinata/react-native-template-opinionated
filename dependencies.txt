@@ -1,0 +1,5 @@
+axios
+react-native-gesture-handler
+react-native-screens
+react-navigation
+realm
