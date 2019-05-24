@@ -1,18 +1,18 @@
 # Create Native App
-Bash script to bootstrap an opinionated React Native project.
+Bash script to bootstrap an opinionated React Native project. Automates the installation and setting up of a React Native project on your desktop.
 
-### Dependencies
+## Dependencies
 - `bash`
 - `node` + `npm`
 - `yarn`
 
 
-### How to run
+## How to run
 ```
 bash create.sh [name_of_project]
 ```
 
-### Packages installed
+## Packages installed
 The packages installed for the project with this script are:
 - axios
 - react-navigation
