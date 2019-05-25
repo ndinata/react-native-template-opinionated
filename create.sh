@@ -9,7 +9,7 @@ REACT_DEV_DEPENDENCIES_FILE="dev-dependencies.txt"
 
 ###############################################################################
 
-errcho() { >&2 echo "  $@"; }
+errcho() { >&2 echo "$@"; }
 
 ###############################################################################
 
@@ -76,6 +76,7 @@ fi
 mkdir -p "$PROJECT_DIR"
 cp ./"$REACT_DEPENDENCIES_FILE" "$PROJECT_DIR"
 cp ./"$REACT_DEV_DEPENDENCIES_FILE" "$PROJECT_DIR"
+cp -r ./config "${PROJECT_DIR}/config"
 echo -ne "\rCreating project directory on your Desktop... Done!"
 echo -e "\n"
 
@@ -100,23 +101,15 @@ done < ../"$REACT_DEV_DEPENDENCIES_FILE"
 echo
 
 # Cleanup
-echo "Cleaning up after ourselves..."
+echo -n "Cleaning up after ourselves..."
 sleep 2s
 cd ..
 rm -rf "$REACT_DEPENDENCIES_FILE" "$REACT_DEV_DEPENDENCIES_FILE"
+mv config/* config/.[^.]* "${1}/"
+rm -rf config/
 echo -ne "\rCleaning up after ourselves... Done!"
 echo -e "\n"
 
 # Summary
 echo "React Native project \"$1\" succesfully created in $PROJECT_DIR!"
 echo
-
-# TODO:
-#   - print info message regarding installing `flow-bin`
-#   - print info message regarding `rnpm` in `package.json`
-#   - print info message regarding adding `pretty` script to `package.json`
-# Things for the user to do
-# echo "Checklist of things left to do:"
-# echo "    1. "
-# echo "    2. "
-# echo "    3. "
