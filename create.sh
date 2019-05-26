@@ -119,6 +119,8 @@ echo -e "\n"
 echo -n "Installing packages specified in the dependency files..."
 sleep 2s
 cd "$1"
+mkdir -p assets/img/
+mkdir -p assets/fonts/
 mkdir -p .vscode/
 mv ../"$VSCODE_SETTINGS_FILE" .vscode/
 while IFS= read -r LINE; do
