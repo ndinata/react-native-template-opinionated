@@ -21,7 +21,6 @@ The packages installed for the project with this script are:
 - react-navigation
 - react-native-screens
 - react-native-gesture-handler
-- realm
 - eslint (`--dev`)
 - babel-eslint (`--dev`)
 - eslint-plugin-flowtype (`--dev`)
