@@ -6,6 +6,7 @@ REACT_NATIVE="react-native"
 PROJECT_DIR="$HOME/Desktop"
 REACT_DEPENDENCIES_FILE="dependencies.txt"
 REACT_DEV_DEPENDENCIES_FILE="dev-dependencies.txt"
+VSCODE_SETTINGS_FILE="settings.json"
 PYTHON_SCRIPT_FILE="package.py"
 PYTHON_SCRIPT_TARGET_FILE="package.json"
 
@@ -91,6 +92,7 @@ fi
 mkdir -p "$PROJECT_DIR"
 cp ./"$REACT_DEPENDENCIES_FILE" "$PROJECT_DIR"
 cp ./"$REACT_DEV_DEPENDENCIES_FILE" "$PROJECT_DIR"
+cp ./"$VSCODE_SETTINGS_FILE" "$PROJECT_DIR"
 cp -r ./config "${PROJECT_DIR}/config"
 cp "$PYTHON_SCRIPT_FILE" "$PROJECT_DIR"
 if [ -f "$HOME/Desktop/$NPM_RN_CLI_LOGFILE" ]; then
@@ -117,6 +119,8 @@ echo -e "\n"
 echo -n "Installing packages specified in the dependency files..."
 sleep 2s
 cd "$1"
+mkdir -p .vscode/
+mv ../"$VSCODE_SETTINGS_FILE" .vscode/
 while IFS= read -r LINE; do
     yarn add "$LINE" >> ../"$YARN_LOGFILE" 2>&1
     if [ $? -ne 0 ]; then

@@ -35,5 +35,6 @@ The packages installed for the project with this script are:
 
 ## Todo
 - [x] Redirect output from `npm`/`react-native-cli`/`yarn` to logfiles
-- [ ] Extract specific commands as constants
-- [ ] Render error messages in red (optional)
+- [x] Add `.vscode/settings.json` to created projecs
+- [ ] Automate creating `assets/img/` and `assets/fonts/` in project directory
+- [ ] Handle message informing installation of `flow-bin` (`yarn add --dev flow-bin`)
