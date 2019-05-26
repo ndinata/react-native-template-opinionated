@@ -6,6 +6,7 @@ Bash script to bootstrap an opinionated boilerplate React Native project. Automa
 - `bash`
 - `node` + `npm`
 - `yarn`
+- `python`
 
 
 ## How to run
@@ -34,6 +35,6 @@ The packages installed for the project with this script are:
 - reactotron-react-native (`--dev`)
 
 ## Todo
-- [ ] Complete checklist items in `create.sh`
+- [ ] Extract specific commands as constants
 - [ ] Redirect output from `npm`/`react-native-cli`/`yarn` to logfiles
 - [ ] Render error messages in red (optional)

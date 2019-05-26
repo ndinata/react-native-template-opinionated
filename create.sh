@@ -6,6 +6,8 @@ REACT_NATIVE="react-native"
 PROJECT_DIR="$HOME/Desktop"
 REACT_DEPENDENCIES_FILE="dependencies.txt"
 REACT_DEV_DEPENDENCIES_FILE="dev-dependencies.txt"
+PYTHON_SCRIPT_FILE="package.py"
+PYTHON_SCRIPT_TARGET_FILE="package.json"
 
 ###############################################################################
 
@@ -77,6 +79,7 @@ mkdir -p "$PROJECT_DIR"
 cp ./"$REACT_DEPENDENCIES_FILE" "$PROJECT_DIR"
 cp ./"$REACT_DEV_DEPENDENCIES_FILE" "$PROJECT_DIR"
 cp -r ./config "${PROJECT_DIR}/config"
+cp "$PYTHON_SCRIPT_FILE" "$PROJECT_DIR"
 echo -ne "\rCreating project directory on your Desktop... Done!"
 echo -e "\n"
 
@@ -98,6 +101,8 @@ done < ../"$REACT_DEPENDENCIES_FILE"
 while IFS= read -r LINE; do
     yarn add --dev "$LINE"
 done < ../"$REACT_DEV_DEPENDENCIES_FILE"
+
+python ../"$PYTHON_SCRIPT_FILE" "$PYTHON_SCRIPT_TARGET_FILE"
 echo
 
 # Cleanup
@@ -107,6 +112,7 @@ cd ..
 rm -rf "$REACT_DEPENDENCIES_FILE" "$REACT_DEV_DEPENDENCIES_FILE"
 mv config/* config/.[^.]* "${1}/"
 rm -rf config/
+rm -rf "$PYTHON_SCRIPT_FILE"
 echo -ne "\rCleaning up after ourselves... Done!"
 echo -e "\n"
 
