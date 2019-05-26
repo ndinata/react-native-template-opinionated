@@ -4,7 +4,7 @@ Bash script to bootstrap an opinionated boilerplate React Native project. Automa
 
 ## Dependencies
 - `bash`
-- `node` + `npm`
+- `npm` + `node@10` (for Realm)
 - `yarn`
 - `python`
 
