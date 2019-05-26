@@ -1,13 +1,15 @@
-#! /usr/bin/env bash
+#!/usr/bin/env bash
 
 SCRIPT_NAME="create"
-DEPENDENCIES=(node npm yarn)
+DEPENDENCIES=(node npm yarn python)
 REACT_NATIVE="react-native"
 PROJECT_DIR="$HOME/Desktop"
 REACT_DEPENDENCIES_FILE="dependencies.txt"
 REACT_DEV_DEPENDENCIES_FILE="dev-dependencies.txt"
 PYTHON_SCRIPT_FILE="package.py"
 PYTHON_SCRIPT_TARGET_FILE="package.json"
+
+NPM_RN_CLI_LOGFILE="cna-npm-rn-cli.txt"
 
 ###############################################################################
 
@@ -59,9 +61,17 @@ if ! [ -x "$(command -v "$REACT_NATIVE")" ]; then
         exit 1
     fi
 
-    echo "Installing \`react-native-cli\`..."
+    echo -n "Installing \`react-native-cli\`..."
     sleep 1s
-    npm install -g react-native-cli
+    npm install -g react-native-cli &> "$HOME/Desktop/$NPM_RN_CLI_LOGFILE"
+    if [ $? -ne 0 ]; then
+        echo -e "\n"
+        errcho "Error: something went wrong when installing \`react-native-cli\`"
+        errcho "Please check the generated \`$NPM_RN_CLI_LOGFILE\` on your Desktop."
+        exit 1
+    fi
+    echo -ne "\rInstalling \`react-native-cli\`... Done!"
+    echo
 fi
 echo
 
@@ -80,6 +90,7 @@ cp ./"$REACT_DEPENDENCIES_FILE" "$PROJECT_DIR"
 cp ./"$REACT_DEV_DEPENDENCIES_FILE" "$PROJECT_DIR"
 cp -r ./config "${PROJECT_DIR}/config"
 cp "$PYTHON_SCRIPT_FILE" "$PROJECT_DIR"
+mv "$HOME/Desktop/$NPM_RN_CLI_LOGFILE" "$PROJECT_DIR"
 echo -ne "\rCreating project directory on your Desktop... Done!"
 echo -e "\n"
 
