@@ -9,8 +9,11 @@ REACT_DEV_DEPENDENCIES_FILE="dev-dependencies.txt"
 PYTHON_SCRIPT_FILE="package.py"
 PYTHON_SCRIPT_TARGET_FILE="package.json"
 
+# Log files
 NPM_RN_CLI_LOGFILE="cna-npm-rn-cli.txt"
 RN_INIT_LOGFILE="rn-init.txt"
+YARN_LOGFILE="yarn-add.txt"
+YARN_DEV_LOGFILE="yarn-add-dev.txt"
 
 ###############################################################################
 
@@ -74,7 +77,6 @@ if ! [ -x "$(command -v "$REACT_NATIVE")" ]; then
     echo -ne "\rInstalling \`react-native-cli\`... Done!"
     echo
 fi
-echo
 
 # Create project directory on the desktop
 echo -n "Creating project directory on your Desktop..."
@@ -112,19 +114,32 @@ echo -ne "\rInstalling bare-bones React Native project in the project directory.
 echo -e "\n"
 
 # Install packages specified in dependency files
-echo "Installing packages specified in the dependency files..."
+echo -n "Installing packages specified in the dependency files..."
 sleep 2s
 cd "$1"
 while IFS= read -r LINE; do
-    yarn add "$LINE"
+    yarn add "$LINE" >> ../"$YARN_LOGFILE" 2>&1
+    if [ $? -ne 0 ]; then
+        echo -e "\n"
+        errcho "Error: something went wrong when installing packages"
+        errcho "Please check the generated \`$YARN_LOGFILE\` in $PROJECT_DIR."
+        exit 1
+    fi
 done < ../"$REACT_DEPENDENCIES_FILE"
 
 while IFS= read -r LINE; do
-    yarn add --dev "$LINE"
+    yarn add --dev "$LINE" >> ../"$YARN_DEV_LOGFILE" 2>&1
+    if [ $? -ne 0 ]; then
+        echo -e "\n"
+        errcho "Error: something went wrong when installing packages"
+        errcho "Please check the generated \`$YARN_DEV_LOGFILE\` in $PROJECT_DIR."
+        exit 1
+    fi
 done < ../"$REACT_DEV_DEPENDENCIES_FILE"
 
 python ../"$PYTHON_SCRIPT_FILE" "$PYTHON_SCRIPT_TARGET_FILE"
-echo
+echo -ne "\rInstalling packages specified in the dependency files... Done!"
+echo -e "\n"
 
 # Cleanup
 echo -n "Cleaning up after ourselves..."
@@ -139,4 +154,11 @@ echo -e "\n"
 
 # Summary
 echo "React Native project \"$1\" succesfully created in $PROJECT_DIR!"
+echo
+echo "You can also check the logfiles created during the following processes in the project directory:"
+if [ -f "$NPM_RN_CLI_LOGFILE" ]; then
+    echo "    - installing React Native CLI:  \`npm install -g react-native-cli\`"
+fi
+echo "    - initialising React Native project:  \`react-native init\`"
+echo "    - installing packages with yarn:  \`yarn add ...\`"
 echo
