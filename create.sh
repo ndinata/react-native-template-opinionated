@@ -91,7 +91,9 @@ cp ./"$REACT_DEPENDENCIES_FILE" "$PROJECT_DIR"
 cp ./"$REACT_DEV_DEPENDENCIES_FILE" "$PROJECT_DIR"
 cp -r ./config "${PROJECT_DIR}/config"
 cp "$PYTHON_SCRIPT_FILE" "$PROJECT_DIR"
-mv "$HOME/Desktop/$NPM_RN_CLI_LOGFILE" "$PROJECT_DIR"
+if [ -f "$HOME/Desktop/$NPM_RN_CLI_LOGFILE" ]; then
+    mv "$HOME/Desktop/$NPM_RN_CLI_LOGFILE" "$PROJECT_DIR"
+fi
 echo -ne "\rCreating project directory on your Desktop... Done!"
 echo -e "\n"
 
