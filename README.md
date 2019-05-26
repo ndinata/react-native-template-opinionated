@@ -39,4 +39,6 @@ The packages installed for the project with this script are:
 - [x] Add `.vscode/settings.json` to created projecs
 - [x] Automate creating `assets/img/` and `assets/fonts/` in project directory
 - [x] Print message regarding installation of `flow-bin`
-- [ ] Improve layout and colour of script output
+- [x] Improve layout and colour of script output
+- [ ] Add `src/` and move `App.js` to `src/`
+- [ ] Prettify .js files in root project directory (optional)

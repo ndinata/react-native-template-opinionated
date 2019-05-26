@@ -16,16 +16,26 @@ RN_INIT_LOGFILE="rn-init.txt"
 YARN_LOGFILE="yarn-add.txt"
 YARN_DEV_LOGFILE="yarn-add-dev.txt"
 
+# Colourful output
+BOLD='\033[1m'
+RED='\033[31m'
+GREEN='\033[32m'
+BLUE='\033[34m'
+NC='\033[0m'
+SUCCESS="${GREEN}✔${NC}"
+ERROR="${RED}Error${NC}"
+ARROW="${BLUE}===>${NC}"
+
 ###############################################################################
 
-errcho() { >&2 echo "$@"; }
+errcho() { >&2 echo -e "$@"; }
 
 ###############################################################################
 
 # Ensure correct number of arguments
 if [ $# != 1 ]; then
-    errcho "Error: incorrect number of argument(s)"
     echo
+    errcho "$ERROR incorrect number of argument(s)"
     errcho "Usage: \`bash $SCRIPT_NAME.sh name_of_project\`"
     exit 1
 else
@@ -43,7 +53,7 @@ echo
 # Check if dependencies actually exist in $PATH and are executable
 for dependency in "${DEPENDENCIES[@]}"; do
     if ! [ -x "$(command -v $dependency)" ]; then
-        errcho "Error: \`$dependency\` cannot be found. Make sure it's available in \$PATH."
+        errcho "$ERROR \`$dependency\` cannot be found. Make sure it's available in \$PATH."
         exit 1
     fi
 done
@@ -62,7 +72,7 @@ if ! [ -x "$(command -v "$REACT_NATIVE")" ]; then
         echo "    \`npm install -g react-native-cli\`"
         exit 0
     elif ! [[ "$REPLY" =~ ^([yY][eE][sS]|[yY])$ ]] && ! [[ -z "$REPLY" ]] ; then
-        errcho "Error: invalid input. Please try again."
+        errcho "$ERROR invalid input. Please try again."
         exit 1
     fi
 
@@ -71,11 +81,11 @@ if ! [ -x "$(command -v "$REACT_NATIVE")" ]; then
     npm install -g react-native-cli &> "$HOME/Desktop/$NPM_RN_CLI_LOGFILE"
     if [ $? -ne 0 ]; then
         echo -e "\n"
-        errcho "Error: something went wrong when installing \`react-native-cli\`"
+        errcho "$ERROR something went wrong when installing \`react-native-cli\`"
         errcho "Please check the generated \`$NPM_RN_CLI_LOGFILE\` on your Desktop."
         exit 1
     fi
-    echo -ne "\rInstalling \`react-native-cli\`... Done!"
+    echo -ne "\rInstalling \`react-native-cli\`... Done! $SUCCESS"
     echo
 fi
 
@@ -98,8 +108,8 @@ cp "$PYTHON_SCRIPT_FILE" "$PROJECT_DIR"
 if [ -f "$HOME/Desktop/$NPM_RN_CLI_LOGFILE" ]; then
     mv "$HOME/Desktop/$NPM_RN_CLI_LOGFILE" "$PROJECT_DIR"
 fi
-echo -ne "\rCreating project directory on your Desktop... Done!"
-echo -e "\n"
+echo -ne "\rCreating project directory on your Desktop... Done! $SUCCESS"
+echo
 
 # Install bare-bones React Native project
 echo -n "Installing bare-bones React Native project in the project directory..."
@@ -108,12 +118,12 @@ cd "$PROJECT_DIR"
 react-native init "$1" &> "$RN_INIT_LOGFILE"
 if [ $? -ne 0 ]; then
     echo -e "\n"
-    errcho "Error: something went wrong when initialising React Native project"
+    errcho "$ERROR something went wrong when initialising React Native project"
     errcho "Please check the generated \`$RN_INIT_LOGFILE\` in $PROJECT_DIR."
     exit 1
 fi
-echo -ne "\rInstalling bare-bones React Native project in the project directory... Done!"
-echo -e "\n"
+echo -ne "\rInstalling bare-bones React Native project in the project directory... Done! $SUCCESS"
+echo
 
 # Install packages specified in dependency files
 echo -n "Installing packages specified in the dependency files..."
@@ -127,7 +137,7 @@ while IFS= read -r LINE; do
     yarn add "$LINE" >> ../"$YARN_LOGFILE" 2>&1
     if [ $? -ne 0 ]; then
         echo -e "\n"
-        errcho "Error: something went wrong when installing packages"
+        errcho "$ERROR something went wrong when installing packages"
         errcho "Please check the generated \`$YARN_LOGFILE\` in $PROJECT_DIR."
         exit 1
     fi
@@ -137,15 +147,15 @@ while IFS= read -r LINE; do
     yarn add --dev "$LINE" >> ../"$YARN_DEV_LOGFILE" 2>&1
     if [ $? -ne 0 ]; then
         echo -e "\n"
-        errcho "Error: something went wrong when installing packages"
+        errcho "$ERROR something went wrong when installing packages"
         errcho "Please check the generated \`$YARN_DEV_LOGFILE\` in $PROJECT_DIR."
         exit 1
     fi
 done < ../"$REACT_DEV_DEPENDENCIES_FILE"
 
 python ../"$PYTHON_SCRIPT_FILE" "$PYTHON_SCRIPT_TARGET_FILE"
-echo -ne "\rInstalling packages specified in the dependency files... Done!"
-echo -e "\n"
+echo -ne "\rInstalling packages specified in the dependency files... Done! $SUCCESS"
+echo 
 
 # Cleanup
 echo -n "Cleaning up after ourselves..."
@@ -155,13 +165,13 @@ rm -rf "$REACT_DEPENDENCIES_FILE" "$REACT_DEV_DEPENDENCIES_FILE"
 mv config/* config/.[^.]* "${1}/"
 rm -rf config/
 rm -rf "$PYTHON_SCRIPT_FILE"
-echo -ne "\rCleaning up after ourselves... Done!"
+echo -ne "\rCleaning up after ourselves... Done! $SUCCESS"
 echo -e "\n"
 
 # Summary
-echo "React Native project \"$1\" succesfully created in $PROJECT_DIR!"
+echo -e "React Native project \"$1\" succesfully created in ${BOLD}$PROJECT_DIR${NC}!"
 echo
-echo "===> LOG FILES"
+echo -e "$ARROW ${BOLD}LOG FILES${NC}"
 echo "Several log files were created in the project directory during the installation process. Feel free to remove them. These are:"
 if [ -f "$NPM_RN_CLI_LOGFILE" ]; then
     echo "- \`$NPM_RN_CLI_LOGFILE\` ——  when installing React Native CLI"
@@ -169,7 +179,7 @@ fi
 echo "- \`$RN_INIT_LOGFILE\` —— when initialising React Native project"
 echo "- \`$YARN_LOGFILE\` and \`$YARN_DEV_LOGFILE\` —— when installing packages with \`yarn\`"
 echo
-echo "===> NOTE"
+echo -e "$ARROW ${BOLD}NOTE${NC}"
 echo "Because of .flowconfig's variable required version of \`flow-bin\`, this script opts to NOT install it automatically. Instead, you can do so yourself by checking the version number at the bottom of \$PROJECT_DIR/.flowconfig and running:"
 echo
 echo "    \`yarn add --dev flow-bin@x\`"
