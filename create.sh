@@ -10,6 +10,7 @@ PYTHON_SCRIPT_FILE="package.py"
 PYTHON_SCRIPT_TARGET_FILE="package.json"
 
 NPM_RN_CLI_LOGFILE="cna-npm-rn-cli.txt"
+RN_INIT_LOGFILE="rn-init.txt"
 
 ###############################################################################
 
@@ -95,11 +96,18 @@ echo -ne "\rCreating project directory on your Desktop... Done!"
 echo -e "\n"
 
 # Install bare-bones React Native project
-echo "Installing bare-bones React Native project in the project directory..."
+echo -n "Installing bare-bones React Native project in the project directory..."
 sleep 2s
 cd "$PROJECT_DIR"
-react-native init "$1"
-echo
+react-native init "$1" &> "$RN_INIT_LOGFILE"
+if [ $? -ne 0 ]; then
+    echo -e "\n"
+    errcho "Error: something went wrong when initialising React Native project"
+    errcho "Please check the generated \`$RN_INIT_LOGFILE\` in $PROJECT_DIR."
+    exit 1
+fi
+echo -ne "\rInstalling bare-bones React Native project in the project directory... Done!"
+echo -e "\n"
 
 # Install packages specified in dependency files
 echo "Installing packages specified in the dependency files..."
