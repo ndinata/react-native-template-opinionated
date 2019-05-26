@@ -21,6 +21,7 @@ The packages installed for the project with this script are:
 - react-navigation
 - react-native-screens
 - react-native-gesture-handler
+- realm
 - eslint (`--dev`)
 - babel-eslint (`--dev`)
 - eslint-plugin-flowtype (`--dev`)
@@ -37,4 +38,5 @@ The packages installed for the project with this script are:
 - [x] Redirect output from `npm`/`react-native-cli`/`yarn` to logfiles
 - [x] Add `.vscode/settings.json` to created projecs
 - [x] Automate creating `assets/img/` and `assets/fonts/` in project directory
-- [ ] Handle message informing installation of `flow-bin` (`yarn add --dev flow-bin`)
+- [x] Print message regarding installation of `flow-bin`
+- [ ] Improve layout and colour of script output

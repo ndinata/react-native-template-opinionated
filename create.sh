@@ -161,10 +161,17 @@ echo -e "\n"
 # Summary
 echo "React Native project \"$1\" succesfully created in $PROJECT_DIR!"
 echo
-echo "You can also check the logfiles created during the following processes in the project directory:"
+echo "===> LOG FILES"
+echo "Several log files were created in the project directory during the installation process. Feel free to remove them. These are:"
 if [ -f "$NPM_RN_CLI_LOGFILE" ]; then
-    echo "    - installing React Native CLI:  \`npm install -g react-native-cli\`"
+    echo "- \`$NPM_RN_CLI_LOGFILE\` ——  when installing React Native CLI"
 fi
-echo "    - initialising React Native project:  \`react-native init\`"
-echo "    - installing packages with yarn:  \`yarn add ...\`"
+echo "- \`$RN_INIT_LOGFILE\` —— when initialising React Native project"
+echo "- \`$YARN_LOGFILE\` and \`$YARN_DEV_LOGFILE\` —— when installing packages with \`yarn\`"
 echo
+echo "===> NOTE"
+echo "Because of .flowconfig's variable required version of \`flow-bin\`, this script opts to NOT install it automatically. Instead, you can do so yourself by checking the version number at the bottom of \$PROJECT_DIR/.flowconfig and running:"
+echo
+echo "    \`yarn add --dev flow-bin@x\`"
+echo
+echo "where \`x\` is the specified version."
