@@ -42,4 +42,4 @@ The packages installed for the project with this script are:
 - [x] Improve layout and colour of script output
 - [ ] Add `src/` and move `App.js` to `src/`
 - [ ] Improve script code structure (make it more modular)
-- [ ] Prettify .js files in root project directory (optional)
+- [x] Prettify .js files in root project directory (optional)

@@ -15,6 +15,7 @@ NPM_RN_CLI_LOGFILE="cna-npm-rn-cli.txt"
 RN_INIT_LOGFILE="rn-init.txt"
 YARN_LOGFILE="yarn-add.txt"
 YARN_DEV_LOGFILE="yarn-add-dev.txt"
+PRETTIER_LOGFILE="prettier.txt"
 
 # Colourful output
 BOLD='\033[1m'
@@ -154,6 +155,15 @@ while IFS= read -r LINE; do
 done < ../"$REACT_DEV_DEPENDENCIES_FILE"
 
 python ../"$PYTHON_SCRIPT_FILE" "$PYTHON_SCRIPT_TARGET_FILE"
+
+# Prettify .js files
+npx prettier --require-pragma --config .prettierrc --write "**/*.js" &> ../"$PRETTIER_LOGFILE"
+if [ $? -ne 0 ]; then
+    echo -e "\n"
+    errcho "$ERROR something went wrong when prettifying .js files"
+    errcho "Please check the generated \`$PRETTIER_LOGFILE\` in $PROJECT_DIR."
+    exit 1
+fi
 echo -ne "\rInstalling packages specified in the dependency files... Done! $SUCCESS"
 echo 
 
@@ -178,6 +188,7 @@ if [ -f "$NPM_RN_CLI_LOGFILE" ]; then
 fi
 echo "- \`$RN_INIT_LOGFILE\` —— when initialising React Native project"
 echo "- \`$YARN_LOGFILE\` and \`$YARN_DEV_LOGFILE\` —— when installing packages with \`yarn\`"
+echo "- \`$PRETTIER_LOGFILE\` —— when prettifying .js files in project directory"
 echo
 echo -e "$ARROW ${BOLD}NOTE${NC}"
 echo "Because of .flowconfig's variable required version of \`flow-bin\`, this script opts to NOT install it automatically. Instead, you can do so yourself by checking the version number at the bottom of \$PROJECT_DIR/.flowconfig and running:"
