@@ -29,7 +29,7 @@ The packages installed for the project with this script are:
 - eslint-plugin-react (`--dev`)
 - eslint-config-airbnb (`--dev`)
 - babel-cli (`--dev`)
-- babel-preset-flow (`--dev`)
+- @babel/preset-flow (`--dev`)
 - prettier (`--dev`)
 - reactotron-react-native (`--dev`)
 

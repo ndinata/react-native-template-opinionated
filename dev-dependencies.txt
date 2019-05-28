@@ -6,6 +6,6 @@ eslint-plugin-jsx-a11y
 eslint-plugin-react
 eslint-config-airbnb
 babel-cli
-babel-preset-flow
+@babel/preset-flow
 prettier
 reactotron-react-native
