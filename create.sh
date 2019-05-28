@@ -10,6 +10,7 @@ VSCODE_SETTINGS_FILE="settings.json"
 PYTHON_SCRIPT_FILE="package.py"
 PYTHON_SCRIPT_TARGET_FILE="package.json"
 APP_JS="App.js"
+INDEX_JS="index.js"
 
 # Log files
 NPM_RN_CLI_LOGFILE="cna-npm-rn-cli.txt"
@@ -157,6 +158,17 @@ done < ../"$REACT_DEV_DEPENDENCIES_FILE"
 
 python ../"$PYTHON_SCRIPT_FILE" "$PYTHON_SCRIPT_TARGET_FILE"
 mv ../config/* ../config/.[^.]* .
+
+# Update `index.js` to import `App` from the new directory
+PATTERN="import App.*"
+while read -r LINE; do
+    if [[ ! $LINE =~ $PATTERN ]]; then
+        echo "$LINE"
+    else
+        echo "import App from './src/App';"
+    fi
+done < "$INDEX_JS" > "temp.js"
+mv "temp.js" "$INDEX_JS"
 
 # Prettify .js files
 npx prettier --require-pragma --config .prettierrc --write "**/*.js" &> ../"$PRETTIER_LOGFILE"
