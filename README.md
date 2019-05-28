@@ -1,6 +1,5 @@
 # Create Native App
-Bash script to bootstrap an opinionated boilerplate React Native project. Automates the installation and setting up of a bare-bones React Native project with several additional packages. The created project is placed in `$HOME/Desktop/`.
-
+Bash script to bootstrap an opinionated boilerplate React Native project. Automates the installation and setting up of a barebones React Native project with several additional packages. The created project is placed in `$HOME/Desktop/`.
 
 ## Dependencies
 - `bash`
@@ -8,12 +7,12 @@ Bash script to bootstrap an opinionated boilerplate React Native project. Automa
 - `yarn`
 - `python`
 
-
 ## How to run
 ```
 bash create.sh [name_of_project]
 ```
 
+__NOTE__: `name_of_project` has to be alphanumeric only (no hyphens etc.)
 
 ## Packages installed
 The packages installed for the project with this script are:
@@ -35,11 +34,7 @@ The packages installed for the project with this script are:
 - reactotron-react-native (`--dev`)
 
 ## Todo
-- [x] Redirect output from `npm`/`react-native-cli`/`yarn` to logfiles
-- [x] Add `.vscode/settings.json` to created projecs
-- [x] Automate creating `assets/img/` and `assets/fonts/` in project directory
-- [x] Print message regarding installation of `flow-bin`
-- [x] Improve layout and colour of script output
+- [x] Prettify .js files in root project directory)
 - [ ] Add `src/` and move `App.js` to `src/`
 - [ ] Improve script code structure (make it more modular)
-- [x] Prettify .js files in root project directory (optional)
+- [ ] Turn this project into an executable/package (optional)
