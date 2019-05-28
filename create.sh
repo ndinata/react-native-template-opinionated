@@ -9,6 +9,7 @@ REACT_DEV_DEPENDENCIES_FILE="dev-dependencies.txt"
 VSCODE_SETTINGS_FILE="settings.json"
 PYTHON_SCRIPT_FILE="package.py"
 PYTHON_SCRIPT_TARGET_FILE="package.json"
+APP_JS="App.js"
 
 # Log files
 NPM_RN_CLI_LOGFILE="cna-npm-rn-cli.txt"
@@ -165,6 +166,8 @@ if [ $? -ne 0 ]; then
     errcho "Please check the generated \`$PRETTIER_LOGFILE\` in $PROJECT_DIR."
     exit 1
 fi
+mkdir -p src
+mv "$APP_JS" src/
 echo -ne "\rInstalling packages specified in the dependency files... Done! $SUCCESS"
 echo 
 
