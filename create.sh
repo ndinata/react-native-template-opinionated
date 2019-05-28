@@ -112,8 +112,8 @@ fi
 echo -ne "\rCreating project directory on your Desktop... Done! $SUCCESS"
 echo
 
-# Install bare-bones React Native project
-echo -n "Installing bare-bones React Native project in the project directory..."
+# Install barebones React Native project
+echo -n "Installing barebones React Native project in the project directory..."
 sleep 2s
 cd "$PROJECT_DIR"
 react-native init "$1" &> "$RN_INIT_LOGFILE"
@@ -123,7 +123,7 @@ if [ $? -ne 0 ]; then
     errcho "Please check the generated \`$RN_INIT_LOGFILE\` in $PROJECT_DIR."
     exit 1
 fi
-echo -ne "\rInstalling bare-bones React Native project in the project directory... Done! $SUCCESS"
+echo -ne "\rInstalling barebones React Native project in the project directory... Done! $SUCCESS"
 echo
 
 # Install packages specified in dependency files
@@ -155,6 +155,7 @@ while IFS= read -r LINE; do
 done < ../"$REACT_DEV_DEPENDENCIES_FILE"
 
 python ../"$PYTHON_SCRIPT_FILE" "$PYTHON_SCRIPT_TARGET_FILE"
+mv ../config/* ../config/.[^.]* .
 
 # Prettify .js files
 npx prettier --require-pragma --config .prettierrc --write "**/*.js" &> ../"$PRETTIER_LOGFILE"
@@ -172,7 +173,6 @@ echo -n "Cleaning up after ourselves..."
 sleep 2s
 cd ..
 rm -rf "$REACT_DEPENDENCIES_FILE" "$REACT_DEV_DEPENDENCIES_FILE"
-mv config/* config/.[^.]* "${1}/"
 rm -rf config/
 rm -rf "$PYTHON_SCRIPT_FILE"
 echo -ne "\rCleaning up after ourselves... Done! $SUCCESS"
