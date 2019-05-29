@@ -33,9 +33,8 @@ The packages installed for the project with this script are:
 - prettier (`--dev`)
 - reactotron-react-native (`--dev`)
 
-## Todo
-- [x] Prettify .js files in root project directory)
-- [x] Add `src/` and move `App.js` to `src/`
-- [x] Improve script code structure (make it more modular)
+You can add/remove packages in `dependencies.txt` and `dev-dependencies.txt`.
+
+## To-do
 - [ ] Allow multiple entry points into the script (optional)
 - [ ] Turn this project into an executable/package (optional)
