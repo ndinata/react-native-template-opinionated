@@ -22,6 +22,8 @@ mkdir -p assets/img/
 mkdir -p assets/fonts/
 mkdir -p .vscode/
 mv ../config/"$VSCODE_SETTINGS_FILE" .vscode/
+
+WILL_LINK=false
 while IFS= read -r LINE; do
     yarn add "$LINE" >> ../"$YARN_LOGFILE" 2>&1
     if [ $? -ne 0 ]; then
@@ -29,6 +31,9 @@ while IFS= read -r LINE; do
         errcho "$ERROR something went wrong when installing packages"
         errcho "Please check the generated \`$YARN_LOGFILE\` in $PROJECT_DIR."
         exit 1
+    fi
+    if [ "$LINE" == "realm" ]; then
+        WILL_LINK=true
     fi
 done < ../"$REACT_DEPENDENCIES_FILE"
 
@@ -42,13 +47,11 @@ while IFS= read -r LINE; do
     fi
 done < ../"$REACT_DEV_DEPENDENCIES_FILE"
 
-# Link dependencies for Realm
-react-native link realm &> ../"$LINK_DEPENDENCIES_LOGFILE"
-if [ $? -ne 0 ]; then
-    echo -e "\n"
-    errcho "$ERROR something went wrong when linking `realm` with React Native"
-    errcho "Please check the generated \`$LINK_DEPENDENCIES_LOGFILE\` in $PROJECT_DIR."
-    exit 1
+# Optionally link modules to React Native
+if [[ "$WILL_LINK" == true ]]; then
+    cp "$DL_DIR/helper/link_deps.sh" .
+    source link_deps.sh
+    rm link_deps.sh
 fi
 
 python ../"$PYTHON_SCRIPT_FILE" "$PYTHON_SCRIPT_TARGET_FILE"
