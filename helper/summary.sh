@@ -10,6 +10,7 @@ fi
 echo "- \`$RN_INIT_LOGFILE\` —— when initialising React Native project"
 echo "- \`$YARN_LOGFILE\` and \`$YARN_DEV_LOGFILE\` —— when installing packages with \`yarn\`"
 echo "- \`$PRETTIER_LOGFILE\` —— when prettifying .js files in project directory"
+echo "- \`$LINK_DEPENDENCIES_LOGFILE\` —— when linking `realm` to React Native"
 echo
 echo -e "$ARROW ${BOLD}Installing Flow${NC}"
 echo "Because of .flowconfig's variable required version of \`flow-bin\`, this script opts to NOT install it automatically. Instead, you can do so yourself by checking the version number at the bottom of \$PROJECT_DIR/.flowconfig and running:"
@@ -19,7 +20,5 @@ echo
 echo "where \`x\` is the specified version."
 echo
 echo -e "$ARROW ${BOLD}Linking Dependencies${NC}"
-echo "In order to complete the installation of several dependencies, follow the instructions in the following links:"
-echo "    - https://reactnavigation.org/docs/en/getting-started.html"
-echo "    - https://realm.io/docs/javascript/latest/#installation"
+echo "In order to complete the installation of \`react-navigation\`, follow the instructions in the following link: https://reactnavigation.org/docs/en/getting-started.html"
 echo
