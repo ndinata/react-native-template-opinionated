@@ -19,6 +19,7 @@ RN_INIT_LOGFILE="rn-init.txt"
 YARN_LOGFILE="yarn-add.txt"
 YARN_DEV_LOGFILE="yarn-add-dev.txt"
 PRETTIER_LOGFILE="prettier.txt"
+LINK_DEPENDENCIES_LOGFILE="link_deps.txt"
 
 # Colourful output
 BOLD='\033[1m'

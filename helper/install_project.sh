@@ -42,6 +42,15 @@ while IFS= read -r LINE; do
     fi
 done < ../"$REACT_DEV_DEPENDENCIES_FILE"
 
+# Link dependencies for Realm
+react-native link realm &> ../"$LINK_DEPENDENCIES_LOGFILE"
+if [ $? -ne 0 ]; then
+    echo -e "\n"
+    errcho "$ERROR something went wrong when linking `realm` with React Native"
+    errcho "Please check the generated \`$LINK_DEPENDENCIES_LOGFILE\` in $PROJECT_DIR."
+    exit 1
+fi
+
 python ../"$PYTHON_SCRIPT_FILE" "$PYTHON_SCRIPT_TARGET_FILE"
 mv ../config/* ../config/.[^.]* .
 
