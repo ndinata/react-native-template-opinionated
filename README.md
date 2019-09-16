@@ -34,12 +34,3 @@ The packages installed for the project with this script are:
 - reactotron-react-native (`--dev`)
 
 You can add/remove packages in `dependencies.txt` and `dev-dependencies.txt`.
-
-## To-do
-- [ ] Add more configurations:
-    - [Intro to ESlint CLI and Jest](https://blog.aurity.co/creating-react-native-app-boilerplate-with-flow-jest-enzyme-prettier-and-eslint-cefdbce3b3d)
-    - [ESLint CLI](https://eslint.org/docs/user-guide/command-line-interface)
-    - [Git hooks with Husky and lint-staged](https://medium.com/gits-apps-insight/utilizing-git-hook-by-using-eslint-husky-and-lint-staged-18b6f6f60f1e)
-    - [Prettier pre-commit](https://prettier.io/docs/en/precommit.html)
-- [ ] Allow multiple entry points into the script (optional)
-- [ ] Turn this project into an executable/package (optional)
