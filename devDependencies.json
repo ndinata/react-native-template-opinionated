@@ -1,0 +1,16 @@
+{
+  "eslint": "latest",
+  "@babel/cli": "latest",
+  "@babel/preset-flow": "latest",
+  "babel-eslint": "latest",
+  "eslint-config-airbnb": "latest",
+  "eslint-plugin-flowtype": "latest",
+  "eslint-plugin-import": "latest",
+  "eslint-plugin-jsx-a11y": "latest",
+  "eslint-plugin-react": "latest",
+  "flow-bin": "0.92.1",
+  "prettier": "latest",
+  "reactotron-react-native": "latest",
+  "husky": "latest",
+  "lint-staged": "latest"
+}

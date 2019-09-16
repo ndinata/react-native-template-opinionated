@@ -8,6 +8,8 @@
     "react/sort-comp": ["off"],
     "react/jsx-one-expression-per-line": "off",
     "react/forbid-prop-types": ["off", { "forbid": [] }],
+    "react/static-property-placement": ["error", "static public field"],
+    "react/jsx-wrap-multilines": ["error", { "prop": "ignore" }],
     "import/extensions": [
       "warn",
       "never",
@@ -40,7 +42,7 @@
     "no-else-return": ["off"]
   },
   "globals": {
-    "fetch": false,
-    "FormData": false
+    "fetch": "readonly",
+    "FormData": "readonly"
   }
 }
