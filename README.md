@@ -1,36 +1,28 @@
-# Create Native App
-Bash script to bootstrap an opinionated boilerplate React Native project. Automates the installation and setting up of a barebones React Native project with several additional packages. The created project is placed in `$HOME/Desktop/`.
+# React Native Template Opinionated
+Template for opinionated boilerplate React Native project. Currently only supports React Native ^0.59.
 
-## Dependencies
-- `bash`
-- `npm` + `node@10` (for Realm)
-- `yarn`
-- `python`
+## Usage
+`react-native init MyProject --version 0.59.10 --template https://github.com/nictar/react-native-template-opinionated`
 
-## How to run
-```
-bash create.sh [name_of_project]
-```
+## Dependencies installed
+Dependencies installed with this template are:
+- Axios
+- Day.js
+- React Navigation
+- Realm
+- ESLint (with several plugins)
+- Flow
+- Prettier
+- Reactotron React Native
+- Husky + Lint-staged
 
-__NOTE__: `name_of_project` has to be alphanumeric only (no hyphens etc.)
+You can add more/remove them in `dependencies.json` and `devDependencies.json`.
 
-## Packages installed
-The packages installed for the project with this script are:
-- axios
-- react-navigation
-- react-native-screens
-- react-native-gesture-handler
-- realm
-- eslint (`--dev`)
-- babel-eslint (`--dev`)
-- eslint-plugin-flowtype (`--dev`)
-- eslint-plugin-import (`--dev`)
-- eslint-plugin-jsx-a11y (`--dev`)
-- eslint-plugin-react (`--dev`)
-- eslint-config-airbnb (`--dev`)
-- babel-cli (`--dev`)
-- @babel/preset-flow (`--dev`)
-- prettier (`--dev`)
-- reactotron-react-native (`--dev`)
+## Extras
+The setup process also:
+- initialises an empty Git repo,
+- adds `npm` scripts for Prettier and ESLint, and
+- prepares `./assets/` directory for asset files
 
-You can add/remove packages in `dependencies.txt` and `dev-dependencies.txt`.
+## Create Native App
+This project initially started out as a collection of Bash scripts, with the same goal of automating the setup for a base React Native project. However, being able to "templatise" a React Native project means that there's a much simpler and cleaner way of doing this. You can check out the project's initial form [here](https://github.com/nictar/create-native-app/tree/v1.0.0).
