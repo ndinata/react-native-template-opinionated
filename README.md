@@ -2,7 +2,7 @@
 Template for opinionated boilerplate React Native project. Currently only supports React Native ^0.59.
 
 ## Usage
-`react-native init MyProject --version 0.59.10 --template https://github.com/nictar/react-native-template-opinionated`
+`react-native init MyProject --version 0.59.10 --template opinionated`
 
 ## Dependencies installed
 Dependencies installed with this template are:

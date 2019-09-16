@@ -1,0 +1,23 @@
+{
+  "name": "react-native-template-opinionated",
+  "version": "2.0.0",
+  "description": "Template for opinionated boilerplate React Native project.",
+  "scripts": {
+    "install": "node setupNavigation.js && node setupConfig.js && node cleanup.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nictar/react-native-template-opinionated"
+  },
+  "keywords": [
+    "react-native",
+    "template",
+    "boilerplate"
+  ],
+  "author": "Nico Dinata <ncdnt@icloud.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nictar/react-native-template-opinionated/issues"
+  },
+  "homepage": "https://github.com/nictar/react-native-template-opinionated"
+}
