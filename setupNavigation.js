@@ -1,3 +1,5 @@
+/** @format */
+
 const fs = require('fs');
 const path = require('path');
 
@@ -13,10 +15,16 @@ const mainActivityDest = path.join(
 );
 
 const mainActivityContent = fs.readFileSync(mainActivitySrc, 'utf8');
-const mainActivityProperContent = mainActivityContent.replace(
+let mainActivityProperContent = mainActivityContent.replace(
   'HelloWorld',
   projectName,
 );
+
+mainActivityProperContent = mainActivityProperContent.replace(
+  'com.test',
+  `com.${projectName}`,
+);
+
 fs.writeFileSync(mainActivitySrc, mainActivityProperContent);
 
 if (fs.existsSync(path.join(projectPath, 'android/'))) {
