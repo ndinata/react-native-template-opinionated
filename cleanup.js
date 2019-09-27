@@ -9,8 +9,6 @@ const templateFilesToDelete = [
   'cleanup.js',
   'LICENSE',
   'README.md',
-  'MainActivity.java',
-  'setupNavigation.js',
   'setupConfig.js',
 ];
 
