@@ -8,7 +8,6 @@ Template for opinionated boilerplate React Native project. Currently only suppor
 Dependencies installed with this template are:
 - Axios
 - Day.js
-- React Navigation
 - Realm
 - ESLint (with several plugins)
 - Flow
