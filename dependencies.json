@@ -1,8 +1,5 @@
 {
   "axios": "latest",
   "dayjs": "latest",
-  "react-native-gesture-handler": "latest",
-  "react-native-reanimated": "latest",
-  "react-navigation": "latest",
   "realm": "latest"
 }
