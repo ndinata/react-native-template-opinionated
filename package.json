@@ -3,7 +3,7 @@
   "version": "2.1.0",
   "description": "Template for opinionated boilerplate React Native project.",
   "scripts": {
-    "install": "node setupNavigation.js && node setupConfig.js && node cleanup.js"
+    "install": "node setupConfig.js && node cleanup.js"
   },
   "repository": {
     "type": "git",
