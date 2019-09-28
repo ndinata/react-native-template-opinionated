@@ -1,7 +1,6 @@
 {
   "parser": "babel-eslint",
-  "extends": ["airbnb", "plugin:flowtype/recommended"],
-  "plugins": ["react", "flowtype", "jsx-a11y", "import"],
+  "extends": ["airbnb", "airbnb/hooks"],
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "react/prefer-stateless-function": ["off"],
