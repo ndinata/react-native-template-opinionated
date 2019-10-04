@@ -40,7 +40,9 @@
     ],
     "arrow-body-style": ["off"],
     "no-unused-vars": ["error", { "args": "none" }],
-    "no-else-return": ["off"]
+    "no-else-return": ["off"],
+    "no-underscore-dangle": ["off"],
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }]
   },
   "globals": {
     "fetch": "readonly",
