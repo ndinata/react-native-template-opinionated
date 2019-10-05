@@ -6,6 +6,11 @@
     "type": "git",
     "url": "git+https://github.com/nictar/react-native-template-opinionated"
   },
+  "files": [
+    "template",
+    "template.config.js",
+    "postInitScript.js"
+  ],
   "keywords": [
     "react-native",
     "template",
