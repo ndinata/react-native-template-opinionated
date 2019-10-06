@@ -2,13 +2,15 @@
   "name": "react-native-template-opinionated",
   "version": "2.1.1",
   "description": "Template for opinionated boilerplate React Native project.",
-  "scripts": {
-    "install": "node setupConfig.js && node cleanup.js"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nictar/react-native-template-opinionated"
   },
+  "files": [
+    "template",
+    "template.config.js",
+    "postInitScript.js"
+  ],
   "keywords": [
     "react-native",
     "template",
