@@ -15,7 +15,6 @@ Dependencies installed with this template are:
 - ESLint (with several plugins)
 - Flow
 - Prettier
-- Reactotron React Native
 - Husky + Lint-staged
 
 You can add more/remove them in `template/package.json`.
