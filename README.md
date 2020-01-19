@@ -12,7 +12,7 @@ npx react-native init MyProject --template react-native-template-opinionated
 Dependencies installed with this template are:
 - Axios
 - Day.js
-- ESLint (with several plugins)
+- ESLint
 - Flow
 - Prettier
 - Husky + Lint-staged
