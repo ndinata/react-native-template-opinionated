@@ -15,6 +15,7 @@ Dependencies installed with this template are:
 - ESLint
 - Flow
 - Prettier
+- Import-sort
 - Husky + Lint-staged
 
 You can add more/remove them in `template/package.json`.

@@ -28,6 +28,7 @@
     "eslint-plugin-prettier": "^3.1.2",
     "flow-bin": "^0.105.0",
     "husky": "^3.0.7",
+    "import-sort-cli": "^6.0.0",
     "jest": "^24.9.0",
     "lint-staged": "^9.4.0",
     "metro-react-native-babel-preset": "^0.56.0",
@@ -44,6 +45,7 @@
   },
   "lint-staged": {
     "src/**/*.js": [
+      "import-sort --write",
       "prettier --config .prettierrc.json --write",
       "eslint",
       "git add"
