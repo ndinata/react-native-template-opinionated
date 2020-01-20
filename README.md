@@ -22,9 +22,7 @@ You can add more/remove them in `template/package.json`.
 
 ## Extras
 The setup process also:
-- initialises an empty Git repo,
-- handles setup of Husky + lint-staged,
-- adds `npm` scripts for Prettier and ESLint, and
+- handles setup of `husky` + `lint-staged`,
 - prepares `./assets/` directory for asset files
 
 ## Create Native App
