@@ -1,6 +1,5 @@
 /**
  * MyProject
- * @format
  * @flow
  */
 

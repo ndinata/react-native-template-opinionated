@@ -14,30 +14,26 @@
     "axios": "^0.19.0",
     "dayjs": "^1.8.16",
     "react": "16.9.0",
-    "react-native": "0.61.2"
+    "react-native": "0.61.5"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.2",
     "@babel/core": "^7.6.2",
     "@babel/preset-flow": "^7.0.0",
     "@babel/runtime": "^7.6.2",
-    "babel-eslint": "^10.0.3",
+    "@react-native-community/eslint-config": "^0.0.6",
+    "@react-native-community/eslint-plugin": "^1.0.0",
     "babel-jest": "^24.9.0",
-    "eslint": "6.1.0",
-    "eslint-config-airbnb": "18.0.1",
-    "eslint-plugin-flowtype": "^4.3.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.14.3",
-    "eslint-plugin-react-hooks": "^1.7.0",
+    "eslint": "^6.5.1",
+    "eslint-plugin-prettier": "^3.1.2",
     "flow-bin": "^0.105.0",
     "husky": "^3.0.7",
+    "import-sort-cli": "^6.0.0",
     "jest": "^24.9.0",
     "lint-staged": "^9.4.0",
     "metro-react-native-babel-preset": "^0.56.0",
     "prettier": "^1.18.2",
-    "react-test-renderer": "16.9.0",
-    "reactotron-react-native": "^4.0.2"
+    "react-test-renderer": "16.9.0"
   },
   "jest": {
     "preset": "react-native"
@@ -49,6 +45,7 @@
   },
   "lint-staged": {
     "src/**/*.js": [
+      "import-sort --write",
       "prettier --config .prettierrc.json --write",
       "eslint",
       "git add"
