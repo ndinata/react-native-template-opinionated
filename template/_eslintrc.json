@@ -1,4 +1,13 @@
 {
   "root": true,
-  "extends": "@react-native-community"
+  "extends": "@react-native-community",
+  "overrides": [
+    {
+      "files": ["*.js"],
+      "plugins": ["react-native"],
+      "rules": {
+        "react-native/no-unused-styles": 1
+      }
+    }
+  ]
 }
