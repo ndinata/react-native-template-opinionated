@@ -1,15 +1,27 @@
 # React Native Template Opinionated
 
-Template for opinionated boilerplate React Native project. Supports React Native v0.62.x.
+Template for opinionated boilerplate React Native project.
 
 ## Usage
 
-#### `react-native@0.62.x`
+```
+npx react-native init MyProject --template react-native-template-opinionated
+```
 
 Note: make sure you don't have the global legacy CLI (`react-native-cli`) installed, as this version of the template only works with the new CLI. More details on legacy vs new CLI can be found [here](https://github.com/react-native-community/cli/blob/master/docs/init.md).
 
+### Different Versions of React Native
+
+| React Native | Template |
+| ------------ | -------- |
+| 0.63.2       | 3.5.\*   |
+| 0.62.2       | 3.4.\*   |
+| 0.61.5       | 3.3.\*   |
+
+### Example with React Native v0.62
+
 ```
-npx react-native init MyProject --template react-native-template-opinionated
+npx react-native init MyProject --template 'react-native-template-opinionated@3.4.*'
 ```
 
 ## Dependencies
