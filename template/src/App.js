@@ -1,6 +1,6 @@
 /**
  * MyProject
- * @flow strict-local
+ * @flow
  */
 
 import React from 'react';
