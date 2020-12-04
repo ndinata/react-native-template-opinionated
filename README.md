@@ -14,7 +14,7 @@ Note: make sure you don't have the global legacy CLI (`react-native-cli`) instal
 
 | React Native | Template |
 | ------------ | -------- |
-| 0.63.3       | 3.5.\*   |
+| 0.63.4       | 3.5.\*   |
 | 0.62.2       | 3.4.\*   |
 | 0.61.5       | 3.3.\*   |
 
