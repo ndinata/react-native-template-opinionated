@@ -3,7 +3,7 @@
   "extends": "@react-native-community",
   "overrides": [
     {
-      "files": ["*.js"],
+      "files": ["*.js", "*.ts", "*.tsx"],
       "plugins": ["react-native"],
       "rules": {
         "react-native/no-unused-styles": 1,
