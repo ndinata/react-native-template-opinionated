@@ -7,7 +7,12 @@
       "plugins": ["react-native"],
       "rules": {
         "react-native/no-unused-styles": 1,
-        "react-hooks/exhaustive-deps": 1
+        "react-hooks/exhaustive-deps": 1,
+        "@typescript-eslint/no-unused-vars": 1,
+
+        // This rule is disabled because it gets triggered when exporting types
+        // and `no-undef` is caught by TS anyways.
+        "no-undef": 0
       }
     }
   ]
