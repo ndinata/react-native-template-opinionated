@@ -5,4 +5,21 @@ module.exports = {
       plugins: ['transform-remove-console'],
     },
   },
+  plugins: [
+    [
+      'module-resolver',
+      {
+        root: ['./src'],
+        extensions: [
+          '.js',
+          '.ts',
+          '.tsx',
+          '.android.js',
+          '.android.tsx',
+          '.ios.js',
+          '.ios.tsx',
+        ],
+      },
+    ],
+  ],
 };

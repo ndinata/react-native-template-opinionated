@@ -9,7 +9,7 @@
     "isolatedModules": true,
     "strict": true,
     "moduleResolution": "node",
-    // "baseUrl": "./src",
+    "baseUrl": "./src",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true
   },
