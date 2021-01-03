@@ -7,7 +7,7 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint \"src/**/*.js\""
+    "lint": "eslint \"src/**\" --ext .js,.ts,.tsx"
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.10",
@@ -45,10 +45,9 @@
   "jest": {
     "preset": "react-native",
     "moduleFileExtensions": [
+      "js",
       "ts",
       "tsx",
-      "js",
-      "jsx",
       "json",
       "node"
     ]
@@ -59,7 +58,7 @@
     }
   },
   "lint-staged": {
-    "src/**/*.js": [
+    "src/**/*.{js,ts,tsx}": [
       "import-sort --write",
       "prettier --config .prettierrc.json --write",
       "eslint"
