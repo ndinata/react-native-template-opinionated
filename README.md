@@ -1,40 +1,46 @@
 # React Native Template Opinionated
 
-Template for opinionated boilerplate React Native project.
+Opinionated template for boilerplate React Native projects.
 
 ## Usage
 
-```
+```sh
 npx react-native init MyProject --template react-native-template-opinionated
 ```
 
 Note: make sure you don't have the global legacy CLI (`react-native-cli`) installed, as this version of the template only works with the new CLI. More details on legacy vs new CLI can be found [here](https://github.com/react-native-community/cli/blob/master/docs/init.md).
 
-### Different Versions of React Native
+#### Different Versions of React Native
 
-| React Native | Template |
-| ------------ | -------- |
-| 0.63.4       | 3.5.\*   |
-| 0.62.2       | 3.4.\*   |
-| 0.61.5       | 3.3.\*   |
+| React Native | Type-check             | Template |
+| ------------ | ---------------------- | -------- |
+| 0.63.4       | Typescript<sup>1</sup> | 4.0.\*   |
+| 0.63.4       | Flow                   | 3.5.\*   |
+| 0.62.2       | Flow                   | 3.4.\*   |
+| 0.61.5       | Flow                   | 3.3.\*   |
 
-### Example with React Native v0.62
+<sup>1</sup>Only Typescript is going to be supported from v4 onwards. The last supported React Native version that uses Flow is v0.63.4.
 
-```
+#### Usage with different versions of React Native
+
+```sh
+# latest React Native version
+npx react-native init MyProject --template react-native-template-opinionated
+
+# e.g. React Native v0.62.2
 npx react-native init MyProject --template 'react-native-template-opinionated@3.4.*'
 ```
 
 ## Dependencies
 
-Dependencies installed with this template are:
+Additional dependencies installed with this template include:
 
-- day.js
-- React Navigation (Stack)
-- ESLint
-- Flow
+- Day.js
+- React Navigation
+- Typescript (Flow on older versions)
 - Prettier
-- import-sort
-- husky + lint-staged
+- Import-sort
+- Husky + lint-staged
 
 You can add more/remove them in `template/package.json`.
 
