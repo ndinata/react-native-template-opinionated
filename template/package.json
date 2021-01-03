@@ -7,7 +7,6 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "pretty": "prettier --config .prettierrc.json --write \"src/**/*.js\"",
     "lint": "eslint \"src/**/*.js\""
   },
   "dependencies": {
@@ -23,9 +22,7 @@
     "react-native-screens": "^2.15.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.9.0",
     "@babel/core": "^7.9.0",
-    "@babel/preset-flow": "^7.12.1",
     "@babel/runtime": "^7.9.0",
     "@react-native-community/eslint-config": "^2.0.0",
     "@types/jest": "^26.0.19",
@@ -34,7 +31,6 @@
     "babel-jest": "^25.1.0",
     "babel-plugin-transform-remove-console": "^6.9.4",
     "eslint": "^7.12.1",
-    "flow-bin": "^0.122.0",
     "husky": "^4.3.0",
     "import-sort-cli": "^6.0.0",
     "import-sort-parser-typescript": "^6.0.0",
