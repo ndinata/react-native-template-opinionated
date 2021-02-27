@@ -1,11 +1,10 @@
 {
   "name": "react-native-template-opinionated",
   "version": "4.0.0",
-  "description": "Template for opinionated boilerplate React Native project.",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nictar/react-native-template-opinionated"
-  },
+  "description": "Opinionated starter template for React Native projects.",
+  "license": "MIT",
+  "repository": "nictar/react-native-template-opinionated",
+  "author": "Nico Dinata <nicodnt@icloud.com>",
   "files": [
     "template",
     "template.config.js",
@@ -14,12 +13,7 @@
   "keywords": [
     "react-native",
     "template",
-    "boilerplate"
-  ],
-  "author": "Nico Dinata <nicodnt@icloud.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/nictar/react-native-template-opinionated/issues"
-  },
-  "homepage": "https://github.com/nictar/react-native-template-opinionated"
+    "boilerplate",
+    "typescript"
+  ]
 }
