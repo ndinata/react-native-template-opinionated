@@ -7,6 +7,10 @@ buildscript {
         compileSdkVersion = 29
         targetSdkVersion = 29
         ndkVersion = "20.1.5948944"
+        kotlinVersion = '1.5.10'
+        dependencies {
+            classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+        }
     }
     repositories {
         google()
@@ -35,5 +39,10 @@ allprojects {
         google()
         jcenter()
         maven { url 'https://www.jitpack.io' }
+
+        // Detox
+        maven {
+            url "$rootDir/../node_modules/detox/Detox-android"
+        }
     }
 }
