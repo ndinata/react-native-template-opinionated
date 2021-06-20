@@ -7,7 +7,11 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint \"src/**\" --ext .js,.ts,.tsx"
+    "lint": "eslint \"src/**\" --ext .js,.ts,.tsx",
+    "e2e:ios:debug": "detox build -c ios.debug && detox test -c ios.debug",
+    "e2e:ios:release": "detox build -c ios.release && detox test -c ios.release",
+    "e2e:android:debug": "detox build -c android.debug && detox test -c android.debug",
+    "e2e:android:release": "detox build -c android.release && detox test -c android.release"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.15.5",
