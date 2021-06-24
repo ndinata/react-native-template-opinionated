@@ -5,7 +5,11 @@ Opinionated template for React Native projects.
 ## Usage
 
 ```sh
+# latest template version — needs node >= 12
 npx react-native init MyProject --template react-native-template-opinionated
+
+# alternatively, use an older version of React Native (more info in table below)
+npx react-native init MyProject --template 'react-native-template-opinionated@3.5.*'
 ```
 
 Note: make sure you don't have the legacy global CLI (`react-native-cli`) installed, as this template only works with the new CLI. More details on legacy vs new CLI can be found [here](https://github.com/react-native-community/cli/blob/master/docs/init.md).
@@ -22,16 +26,6 @@ Note: make sure you don't have the legacy global CLI (`react-native-cli`) instal
 
 <sup>1</sup>Only Typescript is going to be supported from v4 onwards. The last supported React Native version that uses Flow is v0.63.4.
 
-#### Usage with different versions of React Native
-
-```sh
-# latest React Native version
-npx react-native init MyProject --template react-native-template-opinionated
-
-# e.g. React Native v0.63.4 (Flow)
-npx react-native init MyProject --template 'react-native-template-opinionated@3.5.*'
-```
-
 ## Configuration
 
 In addition to the packages the default template comes with (ESLint, Jest, etc.), this template also includes these ones out of the box:
@@ -47,4 +41,4 @@ In addition to the packages the default template comes with (ESLint, Jest, etc.)
 
 ## Create Native App
 
-This project initially started out as a collection of Bash scripts, with the same goal of automating the setup for a base React Native project. However, after React Native CLI added the ability to "templatise" a React Native project, this repo was adapted to conform to its template. You can check out the project's initial form [here](https://github.com/nictar/create-native-app/tree/v1.0.0).
+This project initially started out as a collection of Bash scripts, with the same goal of automating the setup for a base React Native project. This repo was adapted after React Native CLI added the ability to "templatise" a new project. You can check out the project's initial form [here](https://github.com/nictar/create-native-app/tree/v1.0.0).
