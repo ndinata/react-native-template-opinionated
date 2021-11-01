@@ -1,5 +1,7 @@
 package com.myproject;
 
+import android.os.Bundle;
+
 import com.facebook.react.ReactActivity;
 
 public class MainActivity extends ReactActivity {
@@ -11,5 +13,12 @@ public class MainActivity extends ReactActivity {
   @Override
   protected String getMainComponentName() {
     return "MyProject";
+  }
+
+  // react-native-screens
+  // ref: https://reactnavigation.org/docs/getting-started/
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(null);
   }
 }
