@@ -18,6 +18,7 @@ Note: make sure you don't have the legacy global CLI (`react-native-cli`) instal
 
 | React Native | Type-check             | Template |
 | ------------ | ---------------------- | -------- |
+| 0.66.1       | Typescript             | 4.2.\*   |
 | 0.64.2       | Typescript             | 4.1.\*   |
 | 0.63.4       | Typescript<sup>1</sup> | 4.0.\*   |
 | 0.63.4       | Flow                   | 3.5.\*   |
@@ -31,13 +32,14 @@ Note: make sure you don't have the legacy global CLI (`react-native-cli`) instal
 In addition to the packages the default template comes with (ESLint, Jest, etc.), this template also includes these ones out of the box:
 
 - [async-storage](https://github.com/react-native-async-storage/async-storage)
-- [netinfo](https://github.com/react-native-netinfo/react-native-netinfo)
-- [react navigation v5](https://github.com/react-navigation/react-navigation)
 - [dayjs](https://github.com/iamkun/dayjs/)
-- [react-native-svg](https://github.com/react-native-svg/react-native-svg)
 - [detox v18](https://github.com/wix/Detox) (basic config — doesn't support Proguard, AOSP emulators)
-- [husky v6](https://github.com/typicode/husky) + [lint-staged](https://github.com/okonet/lint-staged)
+- [husky](https://github.com/typicode/husky) + [lint-staged](https://github.com/okonet/lint-staged)
 - [import-sort-style-rn](https://github.com/nictar/import-sort-style-rn)
+- [netinfo](https://github.com/react-native-netinfo/react-native-netinfo)
+- [react-native-svg](https://github.com/react-native-svg/react-native-svg)
+- [react-native-version-number](https://github.com/APSL/react-native-version-number)
+- [react-navigation v6](https://github.com/react-navigation/react-navigation)
 
 ## Create Native App
 
