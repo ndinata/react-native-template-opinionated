@@ -1,6 +1,6 @@
 # React Native Template Opinionated
 
-Opinionated template for React Native projects.
+Opinionated template for new React Native projects.
 
 ## Usage
 
@@ -18,7 +18,7 @@ Note: make sure you don't have the legacy global CLI (`react-native-cli`) instal
 
 | React Native | Type-check             | Template |
 | ------------ | ---------------------- | -------- |
-| 0.66.1       | Typescript             | 4.2.\*   |
+| 0.66.3       | Typescript             | 4.2.\*   |
 | 0.64.2       | Typescript             | 4.1.\*   |
 | 0.63.4       | Typescript<sup>1</sup> | 4.0.\*   |
 | 0.63.4       | Flow                   | 3.5.\*   |
@@ -33,7 +33,7 @@ In addition to the packages the default template comes with (ESLint, Jest, etc.)
 
 - [async-storage](https://github.com/react-native-async-storage/async-storage)
 - [dayjs](https://github.com/iamkun/dayjs/)
-- [detox v18](https://github.com/wix/Detox) (basic config — doesn't support Proguard, AOSP emulators)
+- [detox v19](https://github.com/wix/Detox) (basic config — doesn't support Proguard, AOSP emulators)
 - [husky](https://github.com/typicode/husky) + [lint-staged](https://github.com/okonet/lint-staged)
 - [import-sort-style-rn](https://github.com/nictar/import-sort-style-rn)
 - [netinfo](https://github.com/react-native-netinfo/react-native-netinfo)
