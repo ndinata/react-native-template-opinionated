@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.15.5",
-    "@react-native-community/netinfo": "^6.0.0",
+    "@react-native-community/netinfo": "^7.1.1",
     "@react-native-masked-view/masked-view": "^0.2.6",
     "@react-navigation/native": "^6.0.6",
     "@react-navigation/stack": "^6.0.11",
@@ -41,7 +41,7 @@
     "babel-jest": "^27.3.1",
     "babel-plugin-module-resolver": "^4.1.0",
     "babel-plugin-transform-remove-console": "^6.9.4",
-    "detox": "^18.18.0",
+    "detox": "^19.0.0",
     "eslint": "7.14.0",
     "husky": "^7.0.4",
     "import-sort-cli": "^6.0.0",
