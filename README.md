@@ -18,6 +18,7 @@ Note: make sure you don't have the legacy global CLI (`react-native-cli`) instal
 
 | React Native | Type-check             | Template |
 | ------------ | ---------------------- | -------- |
+| 0.67.1       | Typescript             | 4.3.\*   |
 | 0.66.3       | Typescript             | 4.2.\*   |
 | 0.64.2       | Typescript             | 4.1.\*   |
 | 0.63.4       | Typescript<sup>1</sup> | 4.0.\*   |
