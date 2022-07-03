@@ -1,11 +1,11 @@
 # React Native Template Opinionated
 
-Opinionated template for new React Native projects.
+(Slightly) Opinionated template for new React Native projects.
 
 ## Usage
 
 ```sh
-# latest template version — needs node >= 12
+# latest template version — needs Node >= 14
 npx react-native init MyProject --template react-native-template-opinionated
 
 # alternatively, use an older version of React Native (more info in table below)
@@ -16,15 +16,16 @@ Note: make sure you don't have the legacy global CLI (`react-native-cli`) instal
 
 #### Different Versions of React Native
 
-| React Native | Type-check             | Template |
-| ------------ | ---------------------- | -------- |
-| 0.67.1       | Typescript             | 4.3.\*   |
-| 0.66.3       | Typescript             | 4.2.\*   |
-| 0.64.2       | Typescript             | 4.1.\*   |
-| 0.63.4       | Typescript<sup>1</sup> | 4.0.\*   |
-| 0.63.4       | Flow                   | 3.5.\*   |
-| 0.62.2       | Flow                   | 3.4.\*   |
-| 0.61.5       | Flow                   | 3.3.\*   |
+| React Native | Node  | Type-check             | Template |
+| ------------ | ----- | ---------------------- | -------- |
+| 0.68.2       | >= 14 | Typescript             | 5.0.\*   |
+| 0.67.1       | >= 12 | Typescript             | 4.3.\*   |
+| 0.66.3       | >= 12 | Typescript             | 4.2.\*   |
+| 0.64.2       | >= 12 | Typescript             | 4.1.\*   |
+| 0.63.4       | >= 10 | Typescript<sup>1</sup> | 4.0.\*   |
+| 0.63.4       | >= 10 | Flow                   | 3.5.\*   |
+| 0.62.2       | >= 10 | Flow                   | 3.4.\*   |
+| 0.61.5       | >= 10 | Flow                   | 3.3.\*   |
 
 <sup>1</sup>Only Typescript is going to be supported from v4 onwards. The last supported React Native version that uses Flow is v0.63.4.
 
