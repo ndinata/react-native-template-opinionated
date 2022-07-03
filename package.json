@@ -1,7 +1,7 @@
 {
   "name": "react-native-template-opinionated",
-  "version": "4.3.0",
-  "description": "Opinionated starter template for React Native projects.",
+  "version": "5.0.0",
+  "description": "Opinionated starter template for new React Native projects.",
   "license": "MIT",
   "repository": "nictar/react-native-template-opinionated",
   "author": "Nico Dinata <nicodnt@icloud.com>",
