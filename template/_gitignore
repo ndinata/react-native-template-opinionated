@@ -1,5 +1,4 @@
-# OSX
-#
+# macOS
 .DS_Store
 
 # Visual Studio Code
@@ -59,5 +58,6 @@ buck-out/
 # Bundle artifact
 *.jsbundle
 
-# CocoaPods
+# Ruby/CocoaPods
 /ios/Pods/
+/vendor/bundle/

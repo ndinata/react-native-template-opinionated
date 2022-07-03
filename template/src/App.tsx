@@ -2,7 +2,7 @@
  * MyProject
  */
 
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -21,7 +21,7 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 import { NavigationContainer } from '@react-navigation/native';
 
-const Section: React.FC<{ title: string }> = ({ children, title }) => {
+const Section = ({ children, title }: PropsWithChildren<{ title: string }>) => {
   const isDarkMode = useColorScheme() === 'dark';
   return (
     <View style={styles.sectionContainer}>
