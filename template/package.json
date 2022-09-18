@@ -67,7 +67,7 @@
   "lint-staged": {
     "src/**/*.{js,ts,tsx}": [
       "import-sort --write",
-      "prettier --config .prettierrc.json --write",
+      "prettier --write",
       "eslint"
     ]
   },
