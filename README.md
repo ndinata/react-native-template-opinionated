@@ -12,12 +12,13 @@ npx react-native init MyProject --template react-native-template-opinionated
 npx react-native init MyProject --template 'react-native-template-opinionated@3.5.*'
 ```
 
-Note: make sure you don't have the legacy global CLI (`react-native-cli`) installed, as this template only works with the new CLI. More details on legacy vs new CLI can be found [here](https://github.com/react-native-community/cli/blob/master/docs/init.md).
+> Note: make sure you don't have the legacy global CLI (`react-native-cli`) installed, as this template only works with the new CLI. More details on legacy vs new CLI can be found [here](https://github.com/react-native-community/cli/blob/master/docs/init.md).
 
 #### Different Versions of React Native
 
 | React Native | Node  | Type-check             | Template |
 | ------------ | ----- | ---------------------- | -------- |
+| 0.69.5       | >= 14 | Typescript             | 6.0.\*   |
 | 0.68.2       | >= 14 | Typescript             | 5.0.\*   |
 | 0.67.1       | >= 12 | Typescript             | 4.3.\*   |
 | 0.66.3       | >= 12 | Typescript             | 4.2.\*   |
@@ -27,7 +28,9 @@ Note: make sure you don't have the legacy global CLI (`react-native-cli`) instal
 | 0.62.2       | >= 10 | Flow                   | 3.4.\*   |
 | 0.61.5       | >= 10 | Flow                   | 3.3.\*   |
 
-<sup>1</sup>Only Typescript is going to be supported from v4 onwards. The last supported React Native version that uses Flow is v0.63.4.
+<sup>1</sup>Only Typescript is going to be supported from v4 onwards. The last supported React Native version that uses Flow in this template is v0.63.4.
+
+> Note: Starting from v5 of this template (React Native v0.68.2), files related to the [New Architecture](https://reactnative.dev/blog/2022/03/30/version-068#opting-in-to-the-new-architecture) have been added to the template, although it is kept off by default.
 
 ## Configuration
 
