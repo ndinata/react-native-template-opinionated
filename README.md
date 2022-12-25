@@ -5,7 +5,7 @@
 ## Usage
 
 ```sh
-# latest template version — needs Node >= 14
+# latest template version — needs Node >= 16
 npx react-native init MyProject --template react-native-template-opinionated
 
 # alternatively, use an older version of React Native (more info in table below)
@@ -18,6 +18,7 @@ npx react-native init MyProject --template 'react-native-template-opinionated@3.
 
 | React Native | Node  | Type-check             | Template |
 | ------------ | ----- | ---------------------- | -------- |
+| 0.70.6       | >= 16 | Typescript             | 7.0.\*   |
 | 0.69.5       | >= 14 | Typescript             | 6.0.\*   |
 | 0.68.2       | >= 14 | Typescript             | 5.0.\*   |
 | 0.67.1       | >= 12 | Typescript             | 4.3.\*   |
