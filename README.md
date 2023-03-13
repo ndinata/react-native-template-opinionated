@@ -5,7 +5,7 @@
 ## Usage
 
 ```sh
-# latest template version — needs Node >= 16
+# latest template version — needs Node >= 18
 npx react-native init MyProject --template react-native-template-opinionated
 
 # alternatively, use an older version of React Native (more info in table below)
@@ -16,22 +16,21 @@ npx react-native init MyProject --template 'react-native-template-opinionated@3.
 
 #### Different Versions of React Native
 
-| React Native | Node  | Type-check             | Template |
-| ------------ | ----- | ---------------------- | -------- |
-| 0.70.6       | >= 16 | Typescript             | 7.0.\*   |
-| 0.69.5       | >= 14 | Typescript             | 6.0.\*   |
-| 0.68.2       | >= 14 | Typescript             | 5.0.\*   |
-| 0.67.1       | >= 12 | Typescript             | 4.3.\*   |
-| 0.66.3       | >= 12 | Typescript             | 4.2.\*   |
-| 0.64.2       | >= 12 | Typescript             | 4.1.\*   |
-| 0.63.4       | >= 10 | Typescript<sup>1</sup> | 4.0.\*   |
-| 0.63.4       | >= 10 | Flow                   | 3.5.\*   |
-| 0.62.2       | >= 10 | Flow                   | 3.4.\*   |
-| 0.61.5       | >= 10 | Flow                   | 3.3.\*   |
+| React Native | Node  | Type-check | Template |
+| ------------ | ----- | ---------- | -------- |
+| 0.71.4       | >= 18 | Typescript | 8.0.\*   |
+| 0.70.6       | >= 16 | Typescript | 7.0.\*   |
+| 0.69.5       | >= 14 | Typescript | 6.0.\*   |
+| 0.68.2       | >= 14 | Typescript | 5.0.\*   |
+| 0.67.1       | >= 12 | Typescript | 4.3.\*   |
+| 0.66.3       | >= 12 | Typescript | 4.2.\*   |
+| 0.64.2       | >= 12 | Typescript | 4.1.\*   |
+| 0.63.4       | >= 10 | Typescript | 4.0.\*   |
+| 0.63.4       | >= 10 | Flow       | 3.5.\*   |
+| 0.62.2       | >= 10 | Flow       | 3.4.\*   |
+| 0.61.5       | >= 10 | Flow       | 3.3.\*   |
 
-<sup>1</sup>Only Typescript is going to be supported from v4 onwards. The last supported React Native version that uses Flow in this template is v0.63.4.
-
-> Note: Starting from v5 of this template (React Native v0.68.2), files related to the [New Architecture](https://reactnative.dev/blog/2022/03/30/version-068#opting-in-to-the-new-architecture) have been added to the template, although it is kept off by default.
+> Note: Starting from v5 of this template (React Native v0.68.2), files related to the [New Architecture](https://reactnative.dev/blog/2022/03/30/version-068#opting-in-to-the-new-architecture) have been added to the template, although it is kept **off** by default. Hermes, on the other hand, is **enabled** by default starting from v7 of this template (React Native v0.70.6).
 
 ## Configuration
 
