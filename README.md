@@ -18,7 +18,7 @@ npx react-native init MyProject --template 'react-native-template-opinionated@3.
 
 | React Native | Node  | Type-check | Template |
 | ------------ | ----- | ---------- | -------- |
-| 0.71.4       | >= 18 | Typescript | 8.0.\*   |
+| 0.71.8       | >= 18 | Typescript | 8.0.\*   |
 | 0.70.6       | >= 16 | Typescript | 7.0.\*   |
 | 0.69.5       | >= 14 | Typescript | 6.0.\*   |
 | 0.68.2       | >= 14 | Typescript | 5.0.\*   |
