@@ -37,10 +37,10 @@ npx react-native init MyProject --template 'react-native-template-opinionated@3.
 In addition to the packages the default template comes with (ESLint, Jest, etc.), this template also includes these ones out of the box:
 
 - [async-storage](https://github.com/react-native-async-storage/async-storage)
-- [dayjs](https://github.com/iamkun/dayjs/)
 - [detox v19](https://github.com/wix/Detox) (basic config — doesn't support Proguard, AOSP emulators)
 - [husky](https://github.com/typicode/husky) + [lint-staged](https://github.com/okonet/lint-staged)
 - [import-sort-style-rn](https://github.com/nictar/import-sort-style-rn)
+- [luxon](https://github.com/moment/luxon)
 - [netinfo](https://github.com/react-native-netinfo/react-native-netinfo)
 - [react-native-svg](https://github.com/react-native-svg/react-native-svg)
 - [react-native-version-number](https://github.com/APSL/react-native-version-number)
