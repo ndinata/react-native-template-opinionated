@@ -47,7 +47,7 @@ this template also includes these ones out of the box:
 - [detox v19](https://github.com/wix/Detox) (basic config — doesn't support Proguard, AOSP emulators)
 - [husky](https://github.com/typicode/husky) + [lint-staged](https://github.com/okonet/lint-staged)
 - [import-sort-style-rn](https://github.com/nictar/import-sort-style-rn)
-- [luxon](https://github.com/moment/luxon)
+- [luxon](https://github.com/moment/luxon) (with intl variant of JSC enabled)
 - [netinfo](https://github.com/react-native-netinfo/react-native-netinfo)
 - [react-native-svg](https://github.com/react-native-svg/react-native-svg)
 - [react-native-version-number](https://github.com/APSL/react-native-version-number)
