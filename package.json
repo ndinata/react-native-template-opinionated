@@ -3,7 +3,10 @@
   "version": "8.2.0",
   "description": "Opinionated starter template for new React Native projects.",
   "license": "MIT",
-  "repository": "nictar/react-native-template-opinionated",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nictar/react-native-template-opinionated.git"
+  },
   "author": "Nico Dinata <nicodnt@icloud.com>",
   "files": [
     "template",
