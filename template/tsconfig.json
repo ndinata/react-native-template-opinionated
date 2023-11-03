@@ -1,24 +1,27 @@
 {
   "compilerOptions": {
-    "allowJs": true,
-    "allowSyntheticDefaultImports": true,
-    "baseUrl": "./src",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "isolatedModules": true,
-    "jsx": "react-native",
     "lib": ["es2019"],
     "module": "commonjs",
+    "skipLibCheck": true,
+    "target": "esnext",
+
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "jsx": "react-native",
     "moduleResolution": "node",
     "noEmit": true,
+    "resolveJsonModule": true,
+
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "useUnknownInCatchVariables": false,
+
+    "baseUrl": "./src",
     "paths": {
       "@/*": ["./*"]
-    },
-    "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "target": "esnext",
-    "useUnknownInCatchVariables": false
+    }
   },
   "exclude": [
     "node_modules",
