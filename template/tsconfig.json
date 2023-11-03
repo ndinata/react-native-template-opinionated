@@ -11,6 +11,9 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "noEmit": true,
+    "paths": {
+      "@/*": ["./*"]
+    },
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,

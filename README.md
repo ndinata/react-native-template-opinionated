@@ -9,7 +9,7 @@
 npx react-native init MyProject --template react-native-template-opinionated
 
 # alternatively, use an older version of React Native (more info in table below)
-npx react-native init MyProject --template 'react-native-template-opinionated@3.5.*'
+npx react-native init MyProject --template 'react-native-template-opinionated@4.1.*'
 ```
 
 > Note: make sure you don't have the legacy global CLI (`react-native-cli`) installed,
@@ -42,7 +42,6 @@ this template also includes these ones out of the box:
 - [async-storage](https://github.com/react-native-async-storage/async-storage)
 - [detox v19](https://github.com/wix/Detox) (basic config — doesn't support Proguard, AOSP emulators)
 - [husky](https://github.com/typicode/husky) + [lint-staged](https://github.com/okonet/lint-staged)
-- [import-sort-style-rn](https://github.com/nictar/import-sort-style-rn)
 - [luxon](https://github.com/moment/luxon) (with intl variant of JSC enabled)
 - [netinfo](https://github.com/react-native-netinfo/react-native-netinfo)
 - [react-native-svg](https://github.com/react-native-svg/react-native-svg)

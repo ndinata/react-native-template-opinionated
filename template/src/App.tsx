@@ -2,6 +2,7 @@
  * MyProject
  */
 
+import { NavigationContainer } from "@react-navigation/native";
 import React, { PropsWithChildren } from "react";
 import {
   SafeAreaView,
@@ -9,8 +10,8 @@ import {
   StatusBar,
   StyleSheet,
   Text,
-  View,
   useColorScheme,
+  View,
 } from "react-native";
 import {
   Colors,
@@ -19,7 +20,6 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from "react-native/Libraries/NewAppScreen";
-import { NavigationContainer } from "@react-navigation/native";
 
 const Section = ({ children, title }: PropsWithChildren<{ title: string }>) => {
   const isDarkMode = useColorScheme() === "dark";
