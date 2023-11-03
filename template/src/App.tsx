@@ -2,7 +2,7 @@
  * MyProject
  */
 
-import React, { PropsWithChildren } from 'react';
+import React, { PropsWithChildren } from "react";
 import {
   SafeAreaView,
   ScrollView,
@@ -11,18 +11,18 @@ import {
   Text,
   View,
   useColorScheme,
-} from 'react-native';
+} from "react-native";
 import {
   Colors,
   DebugInstructions,
   Header,
   LearnMoreLinks,
   ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-import { NavigationContainer } from '@react-navigation/native';
+} from "react-native/Libraries/NewAppScreen";
+import { NavigationContainer } from "@react-navigation/native";
 
 const Section = ({ children, title }: PropsWithChildren<{ title: string }>) => {
-  const isDarkMode = useColorScheme() === 'dark';
+  const isDarkMode = useColorScheme() === "dark";
   return (
     <View style={styles.sectionContainer}>
       <Text
@@ -46,7 +46,7 @@ const Section = ({ children, title }: PropsWithChildren<{ title: string }>) => {
 };
 
 const App = () => {
-  const isDarkMode = useColorScheme() === 'dark';
+  const isDarkMode = useColorScheme() === "dark";
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
@@ -55,7 +55,7 @@ const App = () => {
   return (
     <NavigationContainer>
       <SafeAreaView style={backgroundStyle}>
-        <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
+        <StatusBar barStyle={isDarkMode ? "light-content" : "dark-content"} />
         <ScrollView
           testID="welcome"
           contentInsetAdjustmentBehavior="automatic"
@@ -95,15 +95,15 @@ const styles = StyleSheet.create({
   },
   sectionTitle: {
     fontSize: 24,
-    fontWeight: '600',
+    fontWeight: "600",
   },
   sectionDescription: {
     marginTop: 8,
     fontSize: 18,
-    fontWeight: '400',
+    fontWeight: "400",
   },
   highlight: {
-    fontWeight: '700',
+    fontWeight: "700",
   },
 });
 

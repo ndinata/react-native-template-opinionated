@@ -1,4 +1,4 @@
-describe('Example', () => {
+describe("Example", () => {
   beforeAll(async () => {
     await device.launchApp();
   });
@@ -7,7 +7,7 @@ describe('Example', () => {
     await device.reloadReactNative();
   });
 
-  it('should have welcome screen', async () => {
-    await expect(element(by.id('welcome'))).toBeVisible();
+  it("should have welcome screen", async () => {
+    await expect(element(by.id("welcome"))).toBeVisible();
   });
 });

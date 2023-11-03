@@ -1,23 +1,23 @@
 module.exports = {
-  presets: ['module:metro-react-native-babel-preset'],
+  presets: ["module:metro-react-native-babel-preset"],
   env: {
     production: {
-      plugins: ['transform-remove-console'],
+      plugins: ["transform-remove-console"],
     },
   },
   plugins: [
     [
-      'module-resolver',
+      "module-resolver",
       {
-        root: ['./src'],
+        root: ["./src"],
         extensions: [
-          '.js',
-          '.ts',
-          '.tsx',
-          '.android.js',
-          '.android.tsx',
-          '.ios.js',
-          '.ios.tsx',
+          ".js",
+          ".ts",
+          ".tsx",
+          ".android.js",
+          ".android.tsx",
+          ".ios.js",
+          ".ios.tsx",
         ],
       },
     ],
