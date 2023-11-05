@@ -20,7 +20,7 @@ npx react-native init MyProject --template 'react-native-template-opinionated@4.
 
 | React Native | Node  | Type-check | Template |
 | ------------ | ----- | ---------- | -------- |
-| 0.71.14      | >= 18 | Typescript | 8.3.\*   |
+| 0.71.14      | >= 18 | Typescript | 8.4.\*   |
 | 0.70.6       | >= 16 | Typescript | 7.0.\*   |
 | 0.69.5       | >= 14 | Typescript | 6.0.\*   |
 | 0.68.2       | >= 14 | Typescript | 5.0.\*   |
@@ -44,7 +44,9 @@ this template also includes these ones out of the box:
 - [husky](https://github.com/typicode/husky) + [lint-staged](https://github.com/okonet/lint-staged)
 - [luxon](https://github.com/moment/luxon) (with intl variant of JSC enabled)
 - [netinfo](https://github.com/react-native-netinfo/react-native-netinfo)
+- [prettier plugin for import sorting](https://github.com/IanVS/prettier-plugin-sort-imports)
 - [react-native-svg](https://github.com/react-native-svg/react-native-svg)
+- [react-native-testing-library](https://github.com/callstack/react-native-testing-library)
 - [react-native-version-number](https://github.com/APSL/react-native-version-number)
 - [react-navigation v6](https://github.com/react-navigation/react-navigation)
 
