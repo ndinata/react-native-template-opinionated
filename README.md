@@ -50,6 +50,10 @@ this template also includes these ones out of the box:
 - [react-native-version-number](https://github.com/APSL/react-native-version-number)
 - [react-navigation v6](https://github.com/react-navigation/react-navigation)
 
+## License
+
+Licensed under the [MIT license](./LICENSE).
+
 ## Create Native App
 
 This project initially started out as a collection of Bash scripts, with the same
