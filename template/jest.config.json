@@ -1,0 +1,4 @@
+{
+  "preset": "react-native",
+  "moduleFileExtensions": ["js", "ts", "tsx", "json", "node"]
+}
