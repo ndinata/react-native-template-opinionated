@@ -1,6 +1,6 @@
 {
   "root": true,
-  "extends": ["@react-native-community", "plugin:prettier/recommended"],
+  "extends": ["@react-native", "plugin:prettier/recommended"],
   "overrides": [
     {
       "files": ["*.js", "*.ts", "*.tsx"],
