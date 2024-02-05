@@ -11,20 +11,18 @@ An opinionated template for new React Native projects in TypeScript (non-Expo).
 npx react-native init MyProject --template react-native-template-opinionated
 
 # alternatively, use an older version of React Native (more info in table below)
-npx react-native init MyProject --template 'react-native-template-opinionated@4.1.*'
+npx react-native init MyProject --template 'react-native-template-opinionated@6.0.*'
 ```
 
 #### Different Versions of React Native
 
-| React Native | Node  | Type-check | Template Version |
-| ------------ | ----- | ---------- | ---------------- |
-| 0.71.16      | >= 18 | Typescript | 8.6.\*           |
-| 0.70.6       | >= 16 | Typescript | 7.0.\*           |
-| 0.69.5       | >= 14 | Typescript | 6.0.\*           |
-| 0.68.2       | >= 14 | Typescript | 5.0.\*           |
-| 0.67.1       | >= 12 | Typescript | 4.3.\*           |
-| 0.66.3       | >= 12 | Typescript | 4.2.\*           |
-| 0.64.2       | >= 12 | Typescript | 4.1.\*           |
+| React Native version | Min. Node version | Template version |
+| -------------------- | ----------------- | ---------------- |
+| 0.72.10              | >= 18             | 9.0.\*           |
+| 0.71.16              | >= 18             | 8.6.\*           |
+| 0.70.6               | >= 16             | 7.0.\*           |
+| 0.69.5               | >= 14             | 6.0.\*           |
+| 0.68.2               | >= 14             | 5.0.\*           |
 
 > Note: Starting from v5 of this template (React Native v0.68.2), files related to
 > the [New Architecture](https://reactnative.dev/blog/2022/03/30/version-068#opting-in-to-the-new-architecture)
