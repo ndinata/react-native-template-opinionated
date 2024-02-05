@@ -1,3 +1,4 @@
+// [template] react-native-svg-transformer
 // https://github.com/kristerkari/react-native-svg-transformer#using-typescript
 declare module "*.svg" {
   import React from "react";

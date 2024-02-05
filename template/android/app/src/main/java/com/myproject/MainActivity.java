@@ -1,5 +1,7 @@
 package com.myproject;
 
+// [template] react-native-screens
+// https://reactnavigation.org/docs/getting-started/
 import android.os.Bundle;
 
 import com.facebook.react.ReactActivity;
@@ -33,8 +35,8 @@ public class MainActivity extends ReactActivity {
     );
   }
 
-  // react-native-screens
-  // ref: https://reactnavigation.org/docs/getting-started/
+  // [template] react-native-screens
+  // https://reactnavigation.org/docs/getting-started/
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(null);

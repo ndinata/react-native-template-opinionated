@@ -1,3 +1,5 @@
+// [template] react-native-gesture-handler
+// https://reactnavigation.org/docs/stack-navigator#installation
 import "react-native-gesture-handler";
 
 import { AppRegistry } from "react-native";
