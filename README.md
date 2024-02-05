@@ -40,7 +40,6 @@ In addition to the packages the default template comes with (ESLint, Jest, etc.)
 this template also includes these ones out of the box:
 
 - [async-storage](https://github.com/react-native-async-storage/async-storage)
-- [detox v19](https://github.com/wix/Detox) (basic config — doesn't support Proguard, AOSP emulators)
 - [husky](https://github.com/typicode/husky) + [lint-staged](https://github.com/okonet/lint-staged)
 - [luxon](https://github.com/moment/luxon) (with intl variant of JSC enabled)
 - [netinfo](https://github.com/react-native-netinfo/react-native-netinfo)
