@@ -3,13 +3,14 @@
   "extends": ["@react-native", "plugin:prettier/recommended"],
   "overrides": [
     {
-      "files": ["*.js", "*.ts", "*.tsx"],
+      "files": ["*.js", "*.jsx", "*.ts", "*.tsx"],
       "rules": {
-        "no-console": 1,
-        "no-undef": 0,
-        "react-hooks/exhaustive-deps": 1,
-        "react-native/no-unused-styles": 1,
-        "@typescript-eslint/no-unused-vars": 1
+        "dot-notation": "off",
+        "no-console": "warn",
+        "no-undef": "off",
+        "react-hooks/exhaustive-deps": "warn",
+        "react-native/no-unused-styles": "warn",
+        "@typescript-eslint/no-unused-vars": "warn"
       }
     }
   ]
