@@ -1,0 +1,2 @@
+template/ios/** -linguist-detectable
+template/android/** -linguist-detectable
