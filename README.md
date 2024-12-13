@@ -1,21 +1,9 @@
 > [!WARNING]
-> The React Native team has [officially recommended](https://reactnative.dev/blog/2024/06/25/use-a-framework-to-build-react-native-apps)
-> new RN apps to be built with a framework like Expo going forward. They also
-> [announced](https://reactnative.dev/blog/2024/08/12/release-0.75#using-frameworks)
-> recently that they're sunsetting `react-native init` by the end of 2024.
->
-> In accordance with these announcements, I will be deprecating this template in
-> December 2024. If you're looking for an Expo template that is in the same vein
-> as this one, check out [`create-avid-app`](https://github.com/ndinata/create-avid-app)
-> (also maintained by me)!
-
-<!-- NOTE: to be exposed in Dec 2024 when this template is deprecated. -->
-<!-- > [!WARNING]
 > This template has been deprecated following the React Native team's
 > [recommendation](https://reactnative.dev/blog/2024/06/25/use-a-framework-to-build-react-native-apps)
 > to build new RN apps using frameworks like Expo. Feel free to check out
 > [`create-avid-app`](https://github.com/ndinata/create-avid-app), which is an
-> Expo template similar to this one also maintained by me. -->
+> Expo template similar to this one also maintained by me.
 
 # react-native-template-opinionated
 
